@@ -78,12 +78,37 @@
     background-color: #f9aec7;
 }
 
+.headerPokedex {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 0 20px;
+    margin-top: 0.938rem;
+  }
+  
+  .headerPokedex h1 {
+    margin: 0;
+  }
+  
+  .headerPokedex img {
+    height: 100%;
+    margin-left: auto;
+    opacity: 0.5;
+    padding: 0.2rem;
+  }
+  
+
 .pokemon {
+    position: relative;
     display: flex;
     flex-direction: column;
     margin: .5rem;
     padding: 1rem;
     border-radius: 1rem;
+}
+
+.pokemonDetail {
+    grid-template-columns: none;
 }
 
 .pokemon .number {
@@ -94,6 +119,7 @@
 }
 
 .pokemon .name {
+    text-align: left;
     text-transform: capitalize;
     color: #fff;
     margin-bottom: .25rem;
@@ -117,7 +143,7 @@
     padding: .25rem .5rem;
     margin: .25rem 0;
     font-size: .625rem;
-    border-radius: 1rem;
+    border-radius: .563rem;
     filter: brightness(1.1);
     text-align: center;
 }
@@ -137,18 +163,172 @@
 }
 
 .pagination button {
-    padding: .25rem .5rem;
+    padding: .5rem .5rem;
     margin: .25rem 0;
-    font-size: .625rem;
+    font-size: .75rem;
     color: #fff;
     background-color: #6c79db;
     border: none;
     border-radius: 1rem;
 }
 
-@media screen and (min-width: 380px) {
+#viewPokemonButton {
+    border: none;
+}
+
+#pokemonListDetails {
+    max-width: 400px;
+    min-width: 320px;
+    width: 400px;
+    position: relative;
+    padding: 1rem;
+    height: 500px;
+    margin: 0;
+    list-style: none;
+}
+#pokemonListDetails .pokemon{
+    position: relative;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+    padding: 0.2rem;
+    border-radius: 1rem;
+}
+
+#pokemonListDetails .detail {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 1rem;
+}
+#pokemonListDetails .detail .name{
+    margin: 0.75rem 0 0 0;
+    font-size: 1.5rem;
+}
+#pokemonListDetails .detail .number{
+    font-size: 0.8rem;
+    text-align: right;
+    opacity: inherit;
+    color: #fff;
+    font-weight: bold;
+}
+#pokemonListDetails .detail .types{
+    display: flex;
+}
+#pokemonListDetails .detail .photo{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#pokemonListDetails .detail .photo img {
+    position: relative;
+    max-width: 100%;
+    height: 7rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    bottom: -4rem;
+  }
+
+.backLink {
+    padding: 1.75rem 1rem 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    align-items: center; 
+    text-decoration: none; 
+}
+.backLink button {
+    margin-right: 5px;
+    background-color: unset;
+    color: #fff;
+  }
+
+.skills {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    height: 50%;
+    width: 98%;
+    padding: 2rem 0.9rem 0 0.9rem;
+    margin-bottom: 0.5rem;
+    border-radius: 1rem;
+    font-size: 0.531rem;
+}
+
+/* Estilos das abas */
+.tab-container {
+    width: 100%;
+    margin: auto;
+  }
+
+  .tab-header {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+  }
+
+  .tab {
+    padding: 0.3rem 0 0.6rem 0;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+    color: #a1a1a1;
+    margin: 0 2px;
+  }
+
+  .tab.active {
+    color: #000; 
+    border-bottom: 2px solid #007bff; 
+  }
+
+  .tab-content {
+    display: none;
+  }
+
+  .tab-content.active {
+    display: block;
+  }
+
+/* Estilo do conteudo */
+.tab-container div span:first-child {
+    display: inline-block;
+    min-width: 3.125rem;
+    text-align: left;
+    padding-bottom: 0.625rem;
+    color: #a1a1a1;
+}
+
+.tab-container div span:nth-child(2) {
+    display: inline-block;
+    text-align: left;
+    padding-left: 0.625rem;
+}
+
+.tab-container-subtitle {
+    margin-top: 0.5rem;
+}
+
+.tab-container-subtitle strong{
+    color: #000;
+    font-size: 0.65rem;
+}
+
+
+/* medias */
+@media screen and (min-width: 375px) {
     .pokemons {
         grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width: 375px) {
+    #pokemonListDetails {
+        /* max-width: 400px; */
+        /* min-width: 320px; */
+        width: 320px;
     }
 }
 
