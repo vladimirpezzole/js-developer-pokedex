@@ -188,7 +188,7 @@
 }
 #pokemonListDetails .pokemon{
     position: relative;
-    height: 500px;
+    height: 550px;
     display: flex;
     flex-direction: column;
     margin: 0.5rem;
@@ -223,8 +223,8 @@
 }
 #pokemonListDetails .detail .photo img {
     position: relative;
-    max-width: 100%;
-    height: 7rem;
+    max-width: 70%;
+    height: 10rem;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
@@ -319,18 +319,20 @@
 
 
 /* medias */
-@media screen and (min-width: 375px) {
-    .pokemons {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 320px) {
     #pokemonListDetails {
         /* max-width: 400px; */
         /* min-width: 320px; */
         width: 320px;
     }
 }
+
+@media screen and (min-width: 320px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 
 @media screen and (min-width: 576px) {
     .pokemons {
