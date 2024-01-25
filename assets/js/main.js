@@ -7,9 +7,7 @@ let offset = 0;
 
 function convertPokemonToLi(pokemon) {
   return `    
-    <button class="viewPokemonButton" type="button" onclick="getPokemonDetailsById(${
-      pokemon.number
-    })">
+    <button class="viewPokemonButton" type="button" onclick="getPokemonDetailsById(${pokemon.number})">
         <li class="pokemon ${pokemon.type}">
             <span class="number">#${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
@@ -24,7 +22,7 @@ function convertPokemonToLi(pokemon) {
                 <img src="${pokemon.photo}"
                      alt="${pokemon.name}">
             </div>
-
+        </li>
     </button>
     `;
 }
@@ -56,7 +54,9 @@ loadMoreButton.addEventListener("click", () => {
     }
   });
 
-// Funções para pagina de detalhes
+
+
+// Função para controlar as abas na pagina de detalhes
 function openTab(tabId, tabElement) {
   // Oculta todos os conteúdos da aba
   var tabContents = document.querySelectorAll(".tab-content");

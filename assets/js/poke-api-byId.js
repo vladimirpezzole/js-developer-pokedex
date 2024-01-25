@@ -18,15 +18,18 @@ function fetchPokemonDetails(url) {
 // na DOM <section id="content" class="content">
 function displayPokemonDetails(pokemonDetails) {
   const pokemonInfo = document.createElement('div');
+  
   pokemonInfo.innerHTML = `
     <ol id="pokemonListDetails" class="">
       <li class="pokemon ${pokemonDetails.primaryType}">
-      <div class="backLink">
-        <a href="index.html">
-          <button><i class="fas fa-arrow-left"></i></button>
-        </a>
-        <button id="heartButton"><i class="far fa-heart"></i></button>
-      </div>
+
+        <div class="backLink">
+          <a href="index.html">
+            <button><i class="fas fa-arrow-left"></i></button>
+          </a>
+          <button id="heartButton"><i class="far fa-heart"></i></button>
+        </div>
+
         <div class="detail">
           <div>
             <div class="name">${pokemonDetails.name}</div>
